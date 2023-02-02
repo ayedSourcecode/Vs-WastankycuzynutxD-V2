@@ -192,9 +192,9 @@ class MainMenuState extends MusicBeatState
 				
 			case 3:
 				char = new FlxSprite(820, 170).loadGraphic(Paths.image('menuChar/WastankyHP'));//put your cords and image here
-				char.frames = Paths.getSparrowAtlas('mainmenu/WastankyH');//here put the name of the xml
-				char.animation.addByPrefix('idleA', 'idle name', 24, true);//on 'idle normal' change it to your xml one
-				char.animation.play('idleA');//you can rename the anim however you want to
+				char.frames = Paths.getSparrowAtlas('menuChar/WastankyHP');//here put the name of the xml
+				char.animation.addByPrefix('idleH', 'WastankyHP idle', 16, true);//on 'idle normal' change it to your xml one
+				char.animation.play('idleH');//you can rename the anim however you want to
 				char.scrollFactor.set();
 				FlxG.sound.play(Paths.sound('appear'), 2);
 				char.flipX = true;//this is for flipping it to look left instead of right you can make it however you want
@@ -202,10 +202,10 @@ class MainMenuState extends MusicBeatState
 				add(char);
 				
 			case 4:
-				char = new FlxSprite(820, 170).loadGraphic(Paths.image('mainmenu/your-sprite'));//put your cords and image here
-				char.frames = Paths.getSparrowAtlas('mainmenu/your-sprite');//here put the name of the xml
-				char.animation.addByPrefix('idleA', 'idle name', 24, true);//on 'idle normal' change it to your xml one
-				char.animation.play('idleA');//you can rename the anim however you want to
+				char = new FlxSprite(820, 170).loadGraphic(Paths.image('menuChar/WastankyPLAY'));//put your cords and image here
+				char.frames = Paths.getSparrowAtlas('menuChar/WastankyPLAY');//here put the name of the xml
+				char.animation.addByPrefix('idleP', 'WastankyPLAY idle', 16, true);//on 'idle normal' change it to your xml one
+				char.animation.play('idleP');//you can rename the anim however you want to
 				char.scrollFactor.set();
 				FlxG.sound.play(Paths.sound('appear'), 2);
 				char.flipX = true;//this is for flipping it to look left instead of right you can make it however you want
@@ -259,9 +259,9 @@ class MainMenuState extends MusicBeatState
 
 			if (controls.ACCEPT)
 			{
-				if (optionShit[curSelected] == 'donate')
+				if (optionShit[curSelected] == 'channel')
 				{
-					CoolUtil.browserLoad('https://ninja-muffin24.itch.io/funkin');
+					CoolUtil.browserLoad('https://www.youtube.com/@wastankyIsnotHere');
 				}
 				else
 				{
@@ -284,6 +284,7 @@ class MainMenuState extends MusicBeatState
 						}
 						else
 						{
+							FlxTween.tween(FlxG.camera, {zoom: 2.2}, 1.6,{ease:FlxEase.expoInOut});
 							FlxFlicker.flicker(spr, 1, 0.06, false, false, function(flick:FlxFlicker)
 							{
 								var daChoice:String = optionShit[curSelected];
