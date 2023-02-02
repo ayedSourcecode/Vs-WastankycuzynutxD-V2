@@ -83,6 +83,9 @@ class CreditsState extends MusicBeatState
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
 			['Vs Wastanky V2'],
 			['Wastanky', 'Wastanky', 'Owner', 'https://www.youtube.com/@wastankyIsnotHere/featured', 'FF1FCC'],
+			['Cassie', 'Cassie', 'Completely Help with thats mods', 'https://www.youtube.com/@wastankyIsnotHere/featured', 'D800FF'],
+			['ayedFNFmaker', 'ayed', 'Character and song and source code', 'https://www.youtube.com/channel/UCmrEN0MKh8u8pEq5Ig8WB3g', '0000FF'],
+			['Ezra TigerYT', 'Ezra', 'Ezra making server and cover', 'https://www.youtube.com/@EzraTheTigerYT', 'FFBC35'],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'river',			'Main Artist/Animator of Psych Engine',							'https://twitter.com/RiverOaken',		'B42F71'],
