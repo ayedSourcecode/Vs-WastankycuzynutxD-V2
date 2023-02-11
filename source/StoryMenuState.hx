@@ -30,6 +30,7 @@ class StoryMenuState extends MusicBeatState
 	private static var lastDifficultyName:String = '';
 	var curDifficulty:Int = 1;
 
+	var musicwas:FlxSound;
 	var txtWeekTitle:FlxText;
 	var bgSprite:FlxSprite;
 
@@ -129,6 +130,9 @@ class StoryMenuState extends MusicBeatState
 				num++;
 			}
 		}
+		musicwas = new FlxSound().loadEmbedded(Paths.music('StoryMenu'), true);
+		musicwas.play();
+		FlxG.sound.list.add(musicwas);
 
 		WeekData.setDirectoryFromWeek(loadedWeeks[0]);
 		var charArray:Array<String> = loadedWeeks[0].weekCharacters;
@@ -269,6 +273,7 @@ class StoryMenuState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			movedBack = true;
+			FlxG.sound.playMusic(Paths.music('freakyMenu'));
 			MusicBeatState.switchState(new MainMenuState());
 		}
 
